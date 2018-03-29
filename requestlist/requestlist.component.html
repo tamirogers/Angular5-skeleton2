@@ -1,0 +1,16 @@
+<table class="table table-sm table-hover">
+    <tr *ngFor="let request of requestService.requestlist">
+      <td>{{request.TeacherID}} - {{request.Destination}}</td>
+      <td>{{request.Teacher}}</td>
+      <td>{{request.TeacherEmail}}</td>
+      <td>{{request.SchoolName}}</td>
+      <td>
+        <a class="btn" (click)="showForEdit(request)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn text-danger" (click)="onDelete(request.RowNameId)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </td>
+    </tr>
+  </table>
